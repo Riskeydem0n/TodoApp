@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Todo App</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/all.min.css">
+  <style rel="stylesheet" href="style.css"></style>
+  <style type="text/css">
+    body {
+  background-image: url("https://free4kwallpapers.com/uploads/originals/2020/04/16/bright-moon-city-wallpaper.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white
+  }
+  .hero {
+    background-color: rgba(3, 3, 3, 0.5);
+    min-height: 100vh;
+    min-width: 100vw;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+  }
+  #task-style {
+    list-style: none;
+    margin-top: 2rem;
+    border-top: 2px solid white;
+    font-size: 1.5rem;
+    display: none;
+  }
+  #shown {
+    list-style: none;
+    margin-top: 2rem;
+    border-top: 2px solid white;
+    font-size: 1.5rem;
+    display: shown;
+  }
+  .lis {
+    border-bottom: 1px solid white;
+    padding-top: 0.6rem;
+    padding-bottom: 0.5rem;
+  }
+ 
+  input[class=checkbox] {
+    float: right;
+    height: 20px;
+    width: 20px;
+    border: 1px solid white;
+  }
+
+  input[type=checkbox]:checked + #text {
+    color: black
+  }
+  .crossed-line {
+    text-decoration: line-through;
+  } 
+  
+  </style>
+</head>
+<body>
+
+<div class="navbar navbar-expand-md navbar-light sticky-top ">
+	<div class="container-fluid">
+		<img src="Mephisto_PP.png">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://twitter.com/Riskeydemon"><i style="color:#00acee" class="fab fa-twitter fa-3x"></i></a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.instagram.com/valuabledatabase/"><i style="color:#E1306C" class="fab fa-instagram fa-3x"></i></a>
+        </li>
+      </ul>
+    </div>
+	</div>
+</div>
+
+<div class="hero">
+  <div class="container">
+    <h1 class="text-center display-1">Todo App</h1>
+    <p></p>
+    <div class="row">
+      <form id="form-id" class="col-8 mx-auto">
+        <div class="input-group">
+          <input  id="Enter-task" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Task">
+            <span>
+              <button value="Add task" id="submit" type="submit" class="btn btn-primary">Submit</button>
+              <button value="Add task" id="delete" type="button" class="btn btn-danger">Delete</button>
+            </span>
+        </div>
+      </form>
+    </div>
+    <div id="Task-List" class="row">
+      <ul id="task-style" class="col-8 mx-auto">
+        <li id="task-template" class="lis" style="display: none;">Task item<input  type="checkbox" aria-label="Checkbox for following text input"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
+
+
+
+
